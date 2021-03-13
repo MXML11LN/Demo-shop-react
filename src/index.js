@@ -16,14 +16,34 @@ import ReactDom from "react-dom"
 //  {h1}
 //  {ul}
 //</div>
-function App() {
+
+const Header = () =>{
   return(
     <>
-      <h1>Helo world</h1>
-      <p>lorem dkjfsjkdfgscm kbkdjfbaksjjbfkjb kjfaksjbf</p> 
+      <h1>helo world</h1>
     </>
   )
 }
-   
+const Content = () =>{
+  return(
+    <>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, numquam non? Officiis ex dicta explicabo suscipit. Tempora quisquam, quidem nesciunt tenetur minus excepturi consequatur nobis, esse eaque nemo ratione sit?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, numquam non? Officiis ex dicta explicabo suscipit. Tempora quisquam, quidem nesciunt tenetur minus excepturi consequatur nobis, esse eaque nemo ratione sit?</p>
+    </>
+  )
+}
+
+function App() {
+  return(
+<>
+
+<Header/>
+<Content/>
+
+</>
+
+  )
+}
+
 
 ReactDom.render(<App/>,document.getElementById("root"))
