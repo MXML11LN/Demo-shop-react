@@ -3,13 +3,11 @@ import "./cart.css"
 
 const Cart = () => {
     return(
-        <div class="col-lg-3">
-		    <div class="cart text-center">
-		    <div class="products-count">0</div>
-		    <div class="products-price">$500</div>
-	    </div>
-    </div>
-
+        <div className="cart text-center">
+		    <div className="cart text-center"></div>
+		    <div className="products-count">0</div>
+		    <div className="products-price">$500</div>
+        </div>
     )
 }
  export default Cart
