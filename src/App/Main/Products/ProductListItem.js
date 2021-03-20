@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './product-list-item.css'
 
-/* деструктуризаціяж: массив розбивається на змінні */
+/* деструктуризаціяж: массив розбивається на змінні
 const user ={
     name:"Ivan",
     age: 20,
@@ -14,18 +14,22 @@ const{
     age,
 } = user;
 
-console.log(name);
+console.log(name); */
 
 
 const ProductListItem = ({
     name,
-    description =" no description avalible",
+    description,
     type,
     capacity,
     price,
+    img,
 }) =>{
     return(
         <div className="product-list-item">
+            <div className = "product-img">
+                <img src={img} alt ={name}/>
+            </div>
             <div className="product-title">{name}</div>
             <div className="product-description">{description}</div>
             <div className="product-features">Type: {type}</div>
@@ -42,8 +46,8 @@ ProductListItem.propTypes = {
     capacity:PropTypes.number.isRequired,
     price:PropTypes.number.isRequired,
 }
-/*ProductListItem.defaultProps ={
+ProductListItem.defaultProps ={
     description:" no description ... ",
 }
-*/
+
 export default ProductListItem

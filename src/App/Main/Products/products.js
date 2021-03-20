@@ -6,7 +6,8 @@ const products = [
     /*description:"This is iPhone 8",*/
     type:"phone",
     capacity:128,
-    price:500, 
+    price:500,
+    img:"images/ipad.png"
 },
 {
     id:2,
@@ -14,7 +15,8 @@ const products = [
     description:"This is iPhone 12", 
     type:"phone",
     capacity:256,
-    price:1500, 
+    price:1500,
+    img:"images/ipad.png" 
 },
 {
     id:3,
@@ -22,7 +24,8 @@ const products = [
     description:"This is iPhone X",
     type:"phone",
     capacity:64,
-    price:800, 
+    price:800,
+    img:"images/iphone.png" 
 },
 {   
     id:4,
@@ -30,7 +33,8 @@ const products = [
     description:"This is iPhone XS",
     type:"phone",
     capacity:756,
-    price:1200, 
+    price:1200,
+    img:"images/ipad.png" 
 },
 {
     id:5,
@@ -38,7 +42,8 @@ const products = [
     description:"This is 8 plus",
     type:"phone",
     capacity:512,
-    price:1400, 
+    price:1400,
+    img:"images/iphone.png" 
 },
 ]
 
