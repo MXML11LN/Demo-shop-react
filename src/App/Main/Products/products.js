@@ -43,7 +43,7 @@ const products = [
     type:"phone",
     capacity:512,
     price:1400,
-    img:"images/iphone.png" 
+    /*img:"images/iphone.png" */
 },
 ]
 

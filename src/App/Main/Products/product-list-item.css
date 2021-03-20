@@ -50,3 +50,7 @@
     text-align: center;
     margin-bottom: 15;
 }
+.product-img img{
+    height: 200px;
+    margin: 10px 0;
+}
