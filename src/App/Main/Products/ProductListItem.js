@@ -21,9 +21,10 @@ class ProductListItem extends Component{
             productCount:prevState.productCount -1
         }))
     }
-    changeColorClick(){
-        this.setState({color:"red"})
-    }
+    //changeColorClick() {
+    //    this.setState((prevState) => ((prevState.color === "green") ? (color = "red") : (color = "green")))
+    //}
+
 
     render(){
         const{
@@ -55,8 +56,10 @@ class ProductListItem extends Component{
             <button className="btn-add-to-cart">Add to cart</button>
         </div>
         )
+    }
 }
-}
+
+
 ProductListItem.propTypes = {
     name:PropTypes.string.isRequired,
     description:PropTypes.string,
