@@ -7,7 +7,6 @@ class ProductListItem extends Component{
 
     state ={
         productCount:1,
-        color:"green",
     }
 
     onIncrementClick() {
@@ -21,11 +20,6 @@ class ProductListItem extends Component{
             productCount:prevState.productCount -1
         }))
     }
-    //changeColorClick() {
-    //    this.setState((prevState) => ((prevState.color === "green") ? (color = "red") : (color = "green")))
-    //}
-
-
     render(){
         const{
             img,
@@ -33,7 +27,8 @@ class ProductListItem extends Component{
             description,
             type,
             capacity,
-            price
+            price,
+            addProductToCart
         } = this.props;
         console.log(this)
     return(
@@ -47,15 +42,17 @@ class ProductListItem extends Component{
             <div className="product-features">Capacity: {capacity} GB</div>
             <div className="product-quantity"> 
             <button
-            disabled ={this.state.productCount<=1}
-            onClick={() => this.onDecrementClick()}>-</button>
+                disabled ={this.state.productCount<=1}
+                onClick={() => this.onDecrementClick()}>-</button>
             <input type="text" value={this.state.productCount} readOnly/>
             <button
-            disabled={this.state.productCount >=10}
-            onClick={() => this.onIncrementClick()}>+</button>
+                disabled={this.state.productCount >=10}
+                onClick={() => this.onIncrementClick()}>+</button>
             </div>
             <div className="product-price"> $ {price}</div>
-            <button className="btn-add-to-cart">Add to cart</button>
+            <button 
+                onClick={() => addProductToCart(this.state.productCount, price)}
+                className="btn-add-to-cart">Add to cart</button>
         </div>
         )
     }
