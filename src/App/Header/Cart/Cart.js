@@ -1,13 +1,17 @@
 import React from "react"
+import App from "../../App"
 import "./cart.css"
 
-const Cart = () => {
+const Cart = ({
+    count,
+    price,
+}) => {
     return(
         <div className="cart text-center">
 		    <div className="cart text-center"></div>
-		    <div className="products-count">0</div>
-		    <div className="products-price">$500</div>
+		    <div className="products-count"> {count}</div>
+		    <div className="products-price">$ {price}</div>
         </div>
     ) 
 }
- export default Cart
+export default Cart
