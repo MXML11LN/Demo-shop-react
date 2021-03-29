@@ -59,7 +59,7 @@
 }
 .product-quantity input{
 text-align: center;
-height: 32px;
+height: 30px;
 }
 .product-quantity button{
 text-align: center;
@@ -67,8 +67,9 @@ height: 30px;
 width: 30px;
 cursor:pointer;
 border: white;
+border-radius: 3px;
 }
 .product-quantity button:hover{
     background-color: grey;
     color: white;
-};
+}

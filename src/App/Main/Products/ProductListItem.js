@@ -42,15 +42,17 @@ class ProductListItem extends Component{
                 <img src={img} alt ={name}/>
             </div>
             <div className="product-title">{name}</div>
-            <p>color:{this.state.color}</p>
-            <button onClick = {() => this.changeColorClick()} >Change color</button>
             <div className="product-description">{description}</div>
             <div className="product-features">Type: {type}</div>
             <div className="product-features">Capacity: {capacity} GB</div>
             <div className="product-quantity"> 
-            <button onClick={() => this.onDecrementClick()}>-</button>
+            <button
+            disabled ={this.state.productCount<=1}
+            onClick={() => this.onDecrementClick()}>-</button>
             <input type="text" value={this.state.productCount} readOnly/>
-            <button onClick={() => this.onIncrementClick()}>+</button>
+            <button
+            disabled={this.state.productCount >=10}
+            onClick={() => this.onIncrementClick()}>+</button>
             </div>
             <div className="product-price"> $ {price}</div>
             <button className="btn-add-to-cart">Add to cart</button>
