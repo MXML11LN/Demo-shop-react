@@ -1,17 +1,19 @@
+import { object } from "prop-types";
 import React from "react"
-import App from "../../App"
 import "./cart.css"
 
 const Cart = ({
-    count,
-    price,
+    productsInCart
 }) => {
+    console.log(productsInCart);
     return(
         <div className="cart text-center">
-		    <div className="cart text-center"></div>
-		    <div className="products-count"> {count}</div>
-		    <div className="products-price">$ {price}</div>
+		    {
+                Object.keys(productsInCart).map(id=>(
+                   <div>{id}:{productsInCart[id]}</div> 
+                ))
+            }
         </div>
     ) 
 }
-export default Cart
+export default Cart 

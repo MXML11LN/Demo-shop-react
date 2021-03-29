@@ -9,9 +9,10 @@ import Main from "./Main/Main"
 class App extends Component{
 
     state={
-        cartData:{
-            count:0,
-            price:0,
+        productsInCart:{
+            1:2,
+            2:5,
+            3:2,
         }
     }
 
@@ -29,6 +30,7 @@ class App extends Component{
             <>
                 <Header
                     cartData={this.state.cartData}
+                    productsInCart={this.state.productsInCart}
                 />
                 <Main
                     addProductToCart={this.addProductToCart}

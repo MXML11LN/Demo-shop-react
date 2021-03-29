@@ -30,7 +30,6 @@ class ProductListItem extends Component{
             price,
             addProductToCart
         } = this.props;
-        console.log(this)
     return(
         <div className="product-list-item">
             <div className = "product-img">
