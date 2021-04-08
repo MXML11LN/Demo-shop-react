@@ -14,10 +14,9 @@ const Main = (
 						Filter
 					</div>
 					<div className="col-lg-9">
-						{/*<ProductList
+						<Route path="/" exact render={() => <ProductList
 							addProductToCart={addProductToCart}
-						/>*/}
-						<Route path="/" exact component={ProductList}/>
+						/>}/>
 						<Route path="/cart" exact component={CartPage}/>
 					</div>
 				</div>
