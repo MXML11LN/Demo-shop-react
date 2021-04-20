@@ -1,9 +1,10 @@
 
 import React from "react"
-import { keys } from "lodash"
 import { Link } from "react-router-dom"
 import products,{getProductsObject} from "../../Main/Products/products"
 import "./cart.css"
+import CartTotal from "../../../Components/Cart/CartTotal"
+import CartProductList from "../../../Components/Cart/CartProductList"
 
 
 
@@ -13,18 +14,12 @@ const Cart = ({
 }) => {
     return(
         <div className="cart text-center">
-            {
-                keys(productsInCart).map(id=>(
-                    <div key={id}>{productsObject[id].name} : {productsInCart[id]}</div> 
-                ))
-            }
-            <div>
-                Total: {
-                keys(productsInCart).reduce((total,id)=>(
-                    total +(productsInCart[id] * productsObject[id].price)
-                ),0)
-            } $
-            </div>
+            <CartProductList
+                productsInCart={productsInCart}
+            />
+            <CartTotal
+                productsInCart={productsInCart}
+            />
             <Link to="/cart">Show Cart</Link>
         </div>
     ) 

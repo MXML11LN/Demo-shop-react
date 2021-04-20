@@ -1,6 +1,7 @@
 import React from "react"
-import {keys} from "lodash"
-import products,{getProductsObject} from "../Products/products"
+import products,{ getProductsObject } from "../Products/products"
+import CartTotal from "../../../Components/Cart/CartTotal"
+import CartProductList from "../../../Components/Cart/CartProductList"
 
 
 const CartPage = ({
@@ -11,18 +12,12 @@ const CartPage = ({
         <>
             <h1 className="page-title">Cart</h1>
 
-            {
-                keys(productsInCart).map(id=>(
-                    <div key={id}>{productsObject[id].name} : {productsInCart[id]} : {productsObject[id].price}</div> 
-                ))
-            }
-            <div>
-                Total: {
-                keys(productsInCart).reduce((total,id)=>(
-                    total +(productsInCart[id] * productsObject[id].price)
-                ),0)
-            } $
-            </div>
+            <CartProductList
+            productsInCart={productsInCart}
+            />
+            <CartTotal
+                productsInCart={productsInCart}
+            />
         </>
     )
 }
