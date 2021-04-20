@@ -1,19 +1,15 @@
 
 import React from "react"
-import {keys} from "lodash"
+import { keys } from "lodash"
 import { Link } from "react-router-dom"
-import products from "../../Main/Products/products"
+import products,{getProductsObject} from "../../Main/Products/products"
 import "./cart.css"
 
 
 
-const productsObject = products.reduce((obj, product)=>({
-    ...obj,
-    [product.id]:product
-}),{})
-
 const Cart = ({
-    productsInCart
+    productsInCart,
+    productsObject = getProductsObject(products),
 }) => {
     return(
         <div className="cart text-center">
