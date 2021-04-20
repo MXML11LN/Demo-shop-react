@@ -4,6 +4,7 @@ import CartPage from "./CartPage/CartPage"
 import ShippingPage from "./ShippingPage/ShippingPage"
 import PaymentPage from "./PaymentPage/PaymentPage"
 import ProductList from "./Products/ProductList"
+import { Testimonials } from "../../Components/Testimonials/Testimonials"
 
 const Main = ({
 	addProductToCart,
@@ -27,6 +28,7 @@ const Main = ({
 						/>}/>
 						<Route path="/shipping" exact component={ShippingPage}/>
 						<Route path="/payment" exact component={PaymentPage}/>
+						<Route path="/"  exact component={Testimonials}/>
 					</div>
 				</div>
 			</div>
