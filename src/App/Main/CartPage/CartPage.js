@@ -1,12 +1,11 @@
 import React from "react"
-import products,{ getProductsObject } from "../Products/products"
 import CartTotal from "../../../Components/Cart/CartTotal"
 import CartProductList from "../../../Components/Cart/CartProductList"
+import CartProductListItemExtended from "../../../Components/Cart/CartProductLicstItemExtended"
 
 
 const CartPage = ({
     productsInCart,
-    productsObject=getProductsObject(products),
 }) => {
     return(
         <>
@@ -14,6 +13,7 @@ const CartPage = ({
 
             <CartProductList
             productsInCart={productsInCart}
+            CartItem={CartProductListItemExtended}
             />
             <CartTotal
                 productsInCart={productsInCart}
