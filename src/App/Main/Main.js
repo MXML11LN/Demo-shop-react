@@ -8,6 +8,7 @@ import ProductList from "./Products/ProductList"
 const Main = ({
 	addProductToCart,
 	productsInCart,
+	removeProductFromCart,
 }) =>{
     return(
         <main className="main">
@@ -22,6 +23,7 @@ const Main = ({
 						/>}/>
 						<Route path="/cart" exact render={() => <CartPage
 							productsInCart={productsInCart}
+							removeProductFromCart={removeProductFromCart}
 						/>}/>
 						<Route path="/shipping" exact component={ShippingPage}/>
 						<Route path="/payment" exact component={PaymentPage}/>

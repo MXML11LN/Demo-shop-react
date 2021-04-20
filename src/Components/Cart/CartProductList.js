@@ -1,12 +1,13 @@
 import React from "react"
-import {keys} from "lodash"
+import { keys } from "lodash"
 import  products, { getProductsObject } from "../../App/Main/Products/products"
 import CartProductListItem from "./CartProductListItem"
 
 const CartProductList = ({
     productsInCart,
     productsObject = getProductsObject(products),
-    CartItem = CartProductListItem
+    CartItem = CartProductListItem,
+    removeProductFromCart
 }) =>{
     return(
         <div>
@@ -16,6 +17,7 @@ const CartProductList = ({
                         key={id}
                         product={productsObject[id]}
                         productCount={productsInCart[id]}
+                        removeProductFromCart={removeProductFromCart}
                     />
                 ))
             }

@@ -23,7 +23,7 @@ class ProductListItem extends Component{
     render(){
         const{
             id,
-            img,
+            image,
             name,
             description,
             type,
@@ -34,7 +34,7 @@ class ProductListItem extends Component{
     return(
         <div className="product-list-item">
             <div className = "product-img">
-                <img src={img} alt ={name}/>
+                <img src={image} alt ={name}/>
             </div>
             <div className="product-title">{name}</div>
             <div className="product-description">{description}</div>
@@ -68,7 +68,7 @@ ProductListItem.propTypes = {
 }
 ProductListItem.defaultProps ={
     description:" no description ... ",
-    img:"images/default-img.png",
+    image:"images/default-img.png",
 }
 
 
