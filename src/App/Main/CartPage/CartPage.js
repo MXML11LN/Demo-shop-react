@@ -12,7 +12,6 @@ const CartPage = ({
     return(
         <>
             <h1 className="page-title">Cart</h1>
-
             <CartProductList
             productsInCart={productsInCart}
             CartItem={CartProductListItemExtended}
@@ -21,7 +20,6 @@ const CartPage = ({
             />
             <CartTotal
                 productsInCart={productsInCart}
-                
             />
         </>
     )

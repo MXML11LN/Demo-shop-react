@@ -7,7 +7,11 @@ const CartTotal = ({
     productsObject = getProductsObject(products),
 }) => {
     return(
-            <div>
+            <div style={{
+                backgroundColor:"rgba(255,255,255,0.9)",
+                padding:"15px",
+                borderRadius:"0.95em",
+                }}>
                 Total: {
                 keys(productsInCart).reduce((total,id)=>(
                     total +(productsInCart[id] * productsObject[id].price)

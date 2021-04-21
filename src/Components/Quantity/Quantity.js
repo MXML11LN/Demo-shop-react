@@ -16,7 +16,6 @@ const Quantity = ({
                     disabled={productCount >=10}
                     onClick={() => onIncrementClick()}>+</button>
             </div>
-        
         </>
     )
 }

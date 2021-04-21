@@ -5,7 +5,12 @@ const CartProductListItem = ({
     productCount
 }) => {
     return(
-        <div>{product.name} : {productCount}</div>
+        <div style={{
+            marginBottom:"15px",
+            backgroundColor:"rgba(255,255,255,0.7)",
+            padding:"10px",
+            borderRadius:"0.95em",
+            }} >{product.name} : {productCount}</div>
     )
 }
 
