@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 import CartTotal from "../../../Components/Cart/CartTotal"
 import CartProductList from "../../../Components/Cart/CartProductList"
 import CartProductListItemExtended from "../../../Components/Cart/CartProductLicstItemExtended"
@@ -21,6 +22,7 @@ const CartPage = ({
             <CartTotal
                 productsInCart={productsInCart}
             />
+            <Link to="/checkout">Proceed to Checkout</Link>
         </>
     )
 }
