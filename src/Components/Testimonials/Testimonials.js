@@ -89,7 +89,8 @@ export const Testimonials = () => {
                             backgroundColor:"rgba(255,255,255,0.9)",
                             padding:"10px",
                             borderRadius:"0.95em",
-                            display:"inline-block"
+                            display:"inline-block",
+                            outline:"none",
                             }}
                         type="text"
                         placeholder="Your Name"
@@ -104,6 +105,7 @@ export const Testimonials = () => {
                             padding:"10px",
                             borderRadius:"0.95em",
                             marginBottom:"15px",
+                            outline:"none",
                             }}
                         placeholder="Your Comment"
                         cols={50} rows={10}

@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import axios from "axios"
+import "./checkout.css"
 
 class CheckoutPage extends Component{
 
@@ -33,34 +34,37 @@ class CheckoutPage extends Component{
     }
     renderForm = () =>{
         return(
-            <form onSubmit={this.sendForm}>
-                <div>
-                    <input 
-                        type="text"
-                        placeholder="enter your name"
-                        value={this.state.name}
-                        onChange={this.orderName}
-                    />
-                </div>
-                <div>
-                    <input 
-                        type="text"
-                        placeholder="enter your adress"
-                        value={this.state.adress}
-                        onChange={this.orderAdress}
-                    />
-                </div>
-                <button type="submit">sent</button>
-            </form>
+            <div className="form">
+                <p>Please enter your name and adress<br/> to deliver your Products</p>
+                <form onSubmit={this.sendForm}>
+                    <div>
+                        <input  className="input"
+                            type="text"
+                            placeholder="enter your name"
+                            value={this.state.name}
+                            onChange={this.orderName}
+                        />
+                    </div>
+                    <div>
+                        <input className="input"
+                            type="text"
+                            placeholder="enter your adress"
+                            value={this.state.adress}
+                            onChange={this.orderAdress}
+                        />
+                    </div>
+                    <button className="button" type="submit">send</button>
+                </form>
+            </div>
         )
     }
 
 
     renderMassage = () =>{
         return(
-            <div>
-                Dear {this.state.name}, thanks for your order!
-                <p>Adress: {this.state.adress}</p>
+            <div className="form">
+                <p>Dear {this.state.name}, thanks for your order!</p>
+                <p>We'll send your product to : {this.state.adress}</p>
             </div>
         )
     }

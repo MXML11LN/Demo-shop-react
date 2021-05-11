@@ -22,7 +22,9 @@ const CartPage = ({
             <CartTotal
                 productsInCart={productsInCart}
             />
-            <Link to="/checkout">Proceed to Checkout</Link>
+            <div style={{margin:"20px auto"}}>
+            <Link className="button-cart"to="/checkout">Proceed to Checkout</Link>
+            </div>
         </>
     )
 }

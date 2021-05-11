@@ -18,7 +18,9 @@ const Cart = ({
             <CartTotal
                 productsInCart={productsInCart}
             />
-            <Link to="/cart">Show Cart</Link>
+            <div style={{marginTop:"20px"}}>
+                <Link className="button-cart" to="/cart">Show Cart</Link>
+            </div>
         </div>
     ) 
 }
