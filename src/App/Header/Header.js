@@ -7,9 +7,7 @@ import Logo from "./Logo/Logo"
 import "./header.css"
 
 
-const Header = ({
-	productsInCart
-}) =>{
+const Header = () =>{
     return(
     <header className="header">
 		<div className="container">
@@ -22,7 +20,6 @@ const Header = ({
 				</div>
 				<div className="col-lg-3">	
 					<Cart
-						productsInCart={productsInCart}
 					/>
 				</div>
 			</div>

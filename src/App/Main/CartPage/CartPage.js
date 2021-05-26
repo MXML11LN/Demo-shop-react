@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'react-router-dom'
+import {connect} from "react-redux"
 import CartTotal from "../../../Components/Cart/CartTotal"
 import CartProductList from "../../../Components/Cart/CartProductList"
 import CartProductListItemExtended from "../../../Components/Cart/CartProductLicstItemExtended"
@@ -7,8 +7,6 @@ import CartProductListItemExtended from "../../../Components/Cart/CartProductLic
 
 const CartPage = ({
     productsInCart,
-    removeProductFromCart,
-    changeProductCount,
 }) => {
     return(
         <>
@@ -16,17 +14,17 @@ const CartPage = ({
             <CartProductList
             productsInCart={productsInCart}
             CartItem={CartProductListItemExtended}
-            removeProductFromCart={removeProductFromCart}
-            changeProductCount={changeProductCount}
             />
             <CartTotal
                 productsInCart={productsInCart}
             />
-            <div style={{margin:"20px auto"}}>
-            <Link className="button-cart"to="/checkout">Proceed to Checkout</Link>
-            </div>
         </>
     )
 }
 
-export default CartPage
+const mapStateToProps = (state) =>({
+    productsInCart:state.productsInCart
+})
+export default  connect(
+    mapStateToProps
+)(CartPage)

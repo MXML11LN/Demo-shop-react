@@ -5,14 +5,8 @@ import ShippingPage from "./ShippingPage/ShippingPage"
 import PaymentPage from "./PaymentPage/PaymentPage"
 import ProductList from "./Products/ProductList"
 import { Testimonials } from "../../Components/Testimonials/Testimonials"
-import CheckoutPage from "./ChekoutPage/CheckoutPage"
 
-const Main = ({
-	addProductToCart,
-	productsInCart,
-	removeProductFromCart,
-	changeProductCount,
-}) =>{
+const Main = () =>{
     return(
         <main className="main">
 			<div className="container">
@@ -21,18 +15,11 @@ const Main = ({
 						Filter
 					</div>
 					<div className="col-lg-9">
-						<Route path="/" exact render={() => <ProductList
-							addProductToCart={addProductToCart}
-						/>}/>
-						<Route path="/cart" exact render={() => <CartPage
-							productsInCart={productsInCart}
-							removeProductFromCart={removeProductFromCart}
-							changeProductCount={changeProductCount}
-						/>}/>
+						<Route path="/" exact component={ProductList}/>
+						<Route path="/cart" component={CartPage}/>
 						<Route path="/shipping" exact component={ShippingPage}/>
 						<Route path="/payment" exact component={PaymentPage}/>
 						<Route path="/"  exact component={Testimonials}/>
-						<Route path="/checkout" exact component={CheckoutPage}/>
 					</div>
 				</div>
 			</div>
